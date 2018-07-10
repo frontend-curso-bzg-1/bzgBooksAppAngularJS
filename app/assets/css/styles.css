@@ -1,0 +1,226 @@
+:root {
+    --main-style-color: rgba(113, 171, 247, 1);
+    --main-shadow-color: rgba(0, 0, 0, .4);
+    --header-back-color: rgba(215, 219, 224, 1);
+    --main-title-color: rgba(255, 255, 255, 1);
+    --input-border-color: rgba(237, 238, 239, 1);
+    --button-border-color: rgba(83, 156, 252, 1);
+}
+
+body {
+    width: 100%;
+    margin: 0;    
+}
+
+h1, h2, h3 {
+    color: var(--main-title-color);
+}
+
+
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+}
+
+header.top-header {
+    min-height: 50px;
+    background-color:var(--main-style-color);    
+    position: relative;    
+    z-index: 500;        
+}
+
+header.top-header h1 {
+    display: inline;
+    font-size: 1.4em;    
+}
+
+
+header.top-header .left-header .toggle-sidebar {
+    color: var(--main-title-color);
+    height: 50px;
+    padding: 15px 15px;
+    display: inline-block;
+}
+
+header.top-header .left-header .toggle-sidebar:hover {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+header.top-header .left-header .toggle-sidebar > i {
+    display: inline-block;
+}
+
+
+
+header.top-header .right-header {       
+    height: 50px;
+    padding: 2px 0;   
+}
+
+header.top-header .right-header .top-form {    
+    padding: 5px;
+}
+
+header.top-header .right-header input.inputSearch {  
+    border-radius: 10px;  
+
+}
+
+header.top-header .right-header a.link-profile {    
+    padding: 15px;
+    font-size: 1.6em;
+}
+
+
+aside.left-aside {
+    width: 300px;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;    
+    padding-top: 50px;
+    box-shadow: 1px 0 2px var(--main-shadow-color);
+}
+
+aside.left-aside.aside-close {
+    display: block !important;
+    width: 50px;
+}
+
+aside.left-aside.aside-close  span {
+    display: none;
+}
+
+aside.left-aside h1, h2, h3 {
+    display: inline;
+}
+
+aside.left-aside .header-aside{
+    max-height: 20%;
+    min-height: 100px;
+    background-color: var(--header-back-color);
+    padding: 16px 10px;
+}
+
+aside.left-aside .header-aside > div {
+    float: left;
+}
+
+aside.left-aside .header-aside .user-image > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+}
+
+aside.left-aside .header-aside .user-info {
+    padding: 5px 10px;
+}
+
+aside.left-aside.aside-close .user-info {
+    display: none;
+}
+
+aside.left-aside.aside-close .user-image > img {
+    width: 30px;
+    height: 30px;
+}
+
+ul.main-menu {
+    list-style-type: none;
+    width: 100%;
+}
+
+ul.main-menu > li > a {
+    display: block;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--input-border-color);
+}
+
+ul.main-menu > li > a > i {
+    margin-right: 5px;
+}
+
+section.main-section {
+    margin-left: 300px;
+    padding: 30px;
+    width: calc(100% - 300px);
+}
+
+section.main-section.main-collape {
+    margin-left: 50px;
+    width: calc(100% - 50px);
+}
+
+section.content {    
+}
+
+div.card {
+    
+    border: 1px solid var(--input-border-color);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;    
+}
+
+div.card-header {
+    padding: 5px 8px;
+    background-color: var(--header-back-color);
+    border-radius: 10px 10px 0 0;
+}
+
+div.card-content {
+    padding: 3px;    
+}
+
+div.image-card {
+    text-align: center;
+}
+
+div.image-card img {
+    width: 50%;
+}
+
+div.card-content p {
+    padding:  0 5px;
+    font-size: .8em
+}
+
+a.card-button {
+    border: 1px solid var(--button-border-color);
+    background-color: var(--main-style-color);
+    padding: 8px 6px;
+    border-radius: 8px;
+    color: var(--main-title-color);
+    margin: 5px;
+    float: right;
+}
+
+div.book h1 {
+    color: var(--main-style-color);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+div.book-description {
+    float: left;
+    width: 40%;
+
+}
+
+div.book-image {
+    float: left;
+    width: 60%;
+    padding: 0 100px
+}
+
+div.book-image > img {
+    width: 300px;
+}
+
+@media screen and (min-width: 440px) and (max-width: 770px) {
+    
+}
+
+@media screen and (max-width: 440px) {
+    
+}

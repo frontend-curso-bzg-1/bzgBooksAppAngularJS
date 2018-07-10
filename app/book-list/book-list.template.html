@@ -1,0 +1,32 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a>Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">
+            <a>Libros</a>
+        </li>
+    </ol>
+</nav>
+
+<section class="container content">
+    <div class="row" id="books">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3" ng-repeat="book in $ctrl.books | filter:$ctrl.query | orderBy:$ctrl.orderProp ">
+            <div class="card">
+                <div class="card-header">
+                    {{book.volumeInfo.title}}
+                </div>
+                <img class="card-img-top" ng-src="{{book.volumeInfo.imageLinks.smallThumbnail}}">
+                <div class="card-body">
+                    <p class="card-text">
+                        {{book.volumeInfo.publisher}}
+                    </p>
+                    <p class="card-text">
+                        {{book.volumeInfo.publishedDate}}
+                    </p>
+                    <a class="col-12 col-md-auto col-lg-auto btn btn-primary" href="#!/books/{{book.id}}">Ver Detalle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

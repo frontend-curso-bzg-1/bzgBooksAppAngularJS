@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" ng-app="bzgBooksApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="bower_components/angular/angular.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="app.module.js"></script>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.config.js"></script>
+    <script src="core/core.module.js"></script>    
+    <script src="core/book/book.module.js"></script>
+    <script src="core/book/book.service.js"></script>
+    <script src="book-list/book-list.module.js"></script>
+    <script src="book-list/book-list.component.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <header class="col-12 top-header">
+                <div class="row justify-content-between">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3  left-header">
+                        <a class="toggle-sidebar">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <h1>My Books App</h1>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 right-header">
+                        <div class="row align-items-center top-form">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <input ng-model="$ctrl.query" type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <a class="link-profile">
+                                    <i class="fa fa-user-circle"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="row">
+            <section class="content-section">
+                <aside class="left-aside">
+                    <div class="header-aside">
+                        <div class="user-image">
+                            <img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png">
+                        </div>
+                        <div class="user-info">
+                            <h3>Nombre Usuario</h3>
+                        </div>
+                    </div>
+                    <div class="content-aside">
+                        <ul class="nav flex-column main-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/">
+                                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                                    <span>Inicio</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/collections">
+                                    <i class="fa fa-book" aria-hidden="true"></i>
+                                    <span>Colección</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <span>Favoritos</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <i class="fa fa-power-off" aria-hidden="true"></i>
+                                    <span>Salir</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <section class="main-section">
+                    <div id="content">
+                        <div class="view-container">
+                            <div ng-view class="view-frame"></div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
